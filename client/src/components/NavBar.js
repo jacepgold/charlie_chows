@@ -11,9 +11,9 @@ class NavBar extends Component {
     if (user.id) {
       return (
         <Menu.Menu position='right'>
-          <Link to='/Menu'>
-            <Menu.Item name='Menu' />
-          </Link> 
+          <Link to='/MainMenu'>
+            <Menu.Item name='MainMenu' />
+          </Link>
           <Menu.Item
             name='Logout'
             onClick={() => dispatch(handleLogout(history))}
