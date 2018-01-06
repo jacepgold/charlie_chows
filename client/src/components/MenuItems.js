@@ -86,6 +86,6 @@ class MenuItems extends React.Component {
     return { items, categories }
   }
 
-}
 
-export default MenuItems;
+
+export default connect(mapStateToProps)(MenuItems);

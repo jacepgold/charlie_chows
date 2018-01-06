@@ -8,9 +8,10 @@ import { Segment,
   Loader,
   Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import MenuItems from './MenuItems';
 // import Search from './Search';
 
-class MainMenu extends React.Component {
+class Menu extends React.Component {
   state = {
     menus: { entries: [] },
     loading: true,
@@ -18,27 +19,18 @@ class MainMenu extends React.Component {
   }
 
   componentDidMount() {
-    this.getmenus(1)
+    this.getMenuItems()
   }
 
-  getmenus = (page) => {
-    axios.get(`/api/all_menus`)
+  getMenus = () => {
+    axios.get(`/api/api_menus`)
       .then( res => this.setState({ menus: res.data, loading: false, visible: res.data }) )
   }
 
-  handlePageClick = (page) => {
+  handlePageClick = () => {
     this.setState({ loading: true }, () => {
-      this.getmenus(page)
+      this.getMenus()
     });
-  }
-
-  search = (term) => {
-    if (term === '')
-      this.setState({ visible: this.state.menus });
-    else {
-      axios.get(`/api/search_menus?query=${term}`)
-        .then( res => this.setState({ visible: res.data }) )
-    }
   }
 
   render() {
@@ -85,4 +77,4 @@ class MainMenu extends React.Component {
   }
 }
 
-export default MainMenu;
+export default Menu;
