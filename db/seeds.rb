@@ -14,16 +14,13 @@ menus.each_with_index do |menu, i|
     customer_phone: Faker::PhoneNumber.phone_number,
   )
 
-  5.times do
-    item = MenuItem.create(
-      name: Faker::Food.dish,
-      price: 3.5,
-      description: Faker::Lorem.sentence,
-      spicy: false,
-      item_type: menus[i]
-    )
-    order.cart_items.create(menu_item_id: item.id)
-  end
+  MenuItem.create(
+    name: "Lemon Sesame Chicken",
+    price: 13.50,
+    description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce.",
+    spicy: false,
+    item_type: "Lunch & Dinner"
+  )
 
 
 end
