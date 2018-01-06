@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 import NoMatch from './NoMatch';
 import NavBar from './NavBar';
 import Flash from './Flash';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
@@ -31,6 +34,7 @@ class App extends Component {
               <Route exact path='/menu' component={MenuItems} />
               <Route exact path='/about' component={About} />
               <Route exact path='/catering' component={Catering} />
+              <Route exact path='/contact' component={Contact} />
               <AuthRoute exact path='/login' component={Login} />
               <AuthRoute exact path='/register' component={Register} />
               //NO ROUTES BEYOND THIS POINT

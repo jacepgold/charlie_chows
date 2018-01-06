@@ -81,11 +81,11 @@ class NavBar extends Component {
             <Link to='/catering'>
               <Menu.Item name='Catering' active={activeItem === 'catering'} onClick={this.handleItemClick} />
             </Link>
-            <Link to='/contact'>
-              <Menu.Item name='Contact' active={activeItem === 'contact'} onClick={this.handleItemClick} />
-            </Link>
             <Link to='/about'>
               <Menu.Item name='Our History' active={activeItem === 'about'} onClick={this.handleItemClick} />
+            </Link>
+            <Link to='/contact'>
+              <Menu.Item name='Contact' active={activeItem === 'contact'} onClick={this.handleItemClick} />
             </Link>
             { this.rightNavs() }
           </Menu>
