@@ -10,7 +10,7 @@ class About extends Component {
         <div align='center'>
           <img style={styles.logo} src={Chow} alt='Charlie Chows Dragon Grill' />
         </div>
-          <Header as='h1' style={styles.history} >OUR HISTORY</Header>
+          <Header as='h1' style={styles.heading}>Our History</Header>
           <p style={ styles.paragraph }>
             Charlie Chow's Dragon Grill has always been known for it's fine
             Asian cuisine served in an attractive, contemporary setting in the 
@@ -33,12 +33,14 @@ const styles = {
       width: '200px',
       borderRadius: 300,
   },
-  history: {
-    textAlign: 'center',
-    textDecoration: 'underline',
-  },
   centerText: {
     textAlign: 'center',
+  },
+  heading: {
+    color: 'crimson',
+    textDecoration: 'underline',
+    textAlign: 'center',
+    fontSize: '3em',
   },
   paragraph: {
     textAlign: 'center',
