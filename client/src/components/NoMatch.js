@@ -25,8 +25,8 @@ class NoMatch extends Component {
 
 const styles = {
   logo: {
-      width: '500px'
-  }
+      width: '500px',
+  },
 }
 
 export default NoMatch;

@@ -3,13 +3,11 @@ import { Container, Segment, Menu, Dropdown, Header, Grid, Image } from 'semanti
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
-import SiteHeader from './SiteHeader';
 import Logo from '../images/ChowsLogo.png';
 
 class NavBar extends Component {
   state = { activeItem: 'home' }
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-  // <Image style={styles.logo} src={Logo} alt='Charlie Chows Dragon Grill' />
   
   callToAction = () => {
     return(

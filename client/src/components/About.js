@@ -11,7 +11,7 @@ class About extends Component {
           <img style={styles.logo} src={Chow} alt='Charlie Chows Dragon Grill' />
         </div>
           <Header as='h1' style={styles.history} >OUR HISTORY</Header>
-          <h2>
+          <p style={ styles.paragraph }>
             Charlie Chow's Dragon Grill has always been known for it's fine
             Asian cuisine served in an attractive, contemporary setting in the 
             heart of downtown Salt Lake City. Be sure to sample our fresh, homemade
@@ -21,7 +21,7 @@ class About extends Component {
             entrees are made fresh to order, we use no MSG in our cooking. Plus, our traditon of 
             friendly service and great food have made Charlie Chow's Dragon Grill a long time 
             Salt Lake favorite.
-          </h2>
+          </p>
         </Container>
       </div>
     );
@@ -36,7 +36,14 @@ const styles = {
   history: {
     textAlign: 'center',
     textDecoration: 'underline',
-}
+  },
+  centerText: {
+    textAlign: 'center',
+  },
+  paragraph: {
+    textAlign: 'center',
+    fontSize: '1.5em',
+  },
 }
 
 export default About;

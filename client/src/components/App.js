@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
+
+// Components
 import NoMatch from './NoMatch';
 import NavBar from './NavBar';
-import Header from './SiteHeader';
-import Login from './Login';
-import Register from './Register';
 import Flash from './Flash';
-import Home from './Home';
-import About from './About';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import Menu from './Menu';
 import { Switch, Route } from 'react-router-dom';
-import SiteHeader from './SiteHeader';
+
+// Site pages
+import Login from './Login';
+import Register from './Register';
+import Home from './Home';
+import About from './About';
+import Catering from './Catering';
+
 
 class App extends Component {
   render() {
@@ -24,8 +28,9 @@ class App extends Component {
           <FetchUser>
             <Switch id='page' style={ styles.page }>
               <Route exact path='/' component={Home} />
-              <Route exact path='/Menu' component={Menu} />
+              <Route exact path='/menu' component={Menu} />
               <Route exact path='/about' component={About} />
+              <Route exact path='/catering' component={Catering} />
               <AuthRoute exact path='/login' component={Login} />
               <AuthRoute exact path='/register' component={Register} />
               //NO ROUTES BEYOND THIS POINT
