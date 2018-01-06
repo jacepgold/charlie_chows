@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20180106180602) do
   end
 
   create_table "menus", force: :cascade do |t|
-    t.string "type", default: "", null: false
+    t.string "menu_type", default: "", null: false
     t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
