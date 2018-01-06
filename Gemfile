@@ -41,5 +41,6 @@ end
 group :test do
   gem 'shoulda-matchers', '~> 3.1.2'
   gem 'database_cleaner', '~> 1.6.2'
-  gem 'simplecov', '~> 0.15.1'
+  gem 'simplecov', '~> 0.15.1', require: false
+  gem 'factory_bot_rails', '~> 4.8.2'
 end

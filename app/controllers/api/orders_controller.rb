@@ -10,7 +10,7 @@ class Api::OrdersController < ApplicationController
   end
 
   def create
-    order = order.new(order_params)
+    order = Order.new(order_params)
     if order.save
       render json: order
     else
