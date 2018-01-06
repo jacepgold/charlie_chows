@@ -19,8 +19,6 @@ class Home extends React.Component {
     };
     return (
       <Container>
-        <Header as='h1' textAlign='center' style={styles.heading}>Charlie Chow's</Header>
-        <Header as='h2' textAlign='center'>Dragon Grill</Header>
       <Slider {...settings}>
         <div><img style={styles.food} src={Food1} alt='Charlie Chows Dragon Grill' /></div>
         <div><img style={styles.food} src={Food2} alt='Charlie Chows Dragon Grill' /></div>
