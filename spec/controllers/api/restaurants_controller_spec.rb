@@ -7,6 +7,11 @@ RSpec.describe Api::RestaurantsController, type: :controller do
       get :show
       expect(response).to have_http_status(:success)
     end
+
+    it "returns correct JSON for the restaurant" do
+      get :show
+      binding.pry
+    end
   end
 
   describe "GET #update" do

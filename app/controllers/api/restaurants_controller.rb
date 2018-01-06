@@ -2,6 +2,7 @@ class Api::RestaurantsController < ApplicationController
   before_action :set_restaurant
 
   def show
+    binding.pry
     render json: @restaurant
   end
 
