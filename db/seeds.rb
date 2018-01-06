@@ -27,3 +27,193 @@ menus = ['Appetizers', 'Entrees', 'Beverages', 'Desserts']
 #
 #
 # end
+
+# item = MenuItem.create(
+#       name: "Lemon Sesame Shrimp",
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+#
+# item = MenuItem.create(
+#       name: "Pepper Shrimp/Scallops",
+#       price: 12.95,
+#       description: "Peppery onions and peppers stir-fired in an oyster sauce with ground peppercorns.",
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+#
+# item = MenuItem.create(
+#       name: "Singapore Honey Shrimp",
+#       price: 15.95,
+#       description: "Honey glazed deep-fried shrimp with pineapple, red and green peppers and onion.",
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+#
+# item = MenuItem.create(
+#       name: "Kung Pao Shrimp/Scallions",
+#       price: 15.95,
+#       description: "Spicy stir-fried dish with mixed vegetables, topped with whole roasted peanuts"
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+#
+# item = MenuItem.create(
+#       name: "Honey Glazed Walnut Shrimp",
+#       price: 15.95,
+#       description: "Our Chef's special dish. Shrimp Prepared in an exquisite sauce worthy of an emperor."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+#
+# item = MenuItem.create(
+#       name: "Coconut Shrimp",
+#       price: 12.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+# item = MenuItem.create(
+#       name: Lemon Sesame Shrimp,
+#       price: 15.95,
+#       description: "Butterflied shrimp in a light ginger batter, and served with a sweet lemon sauce."
+#       spicy: false,
+#       item_type: menus[i]
+#     )
+#   order.cart_items.create(menu_item_id: item.id)
+# end
+#
+# item = MenuItem.create(
+#
+# )
