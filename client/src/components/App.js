@@ -16,8 +16,6 @@ import { Switch, Route } from 'react-router-dom';
 // Site pages
 import Login from './Login';
 import Register from './Register';
-import Home from './Home';
-import About from './About';
 import Catering from './Catering';
 
 
