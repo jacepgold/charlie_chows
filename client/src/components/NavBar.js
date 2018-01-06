@@ -11,9 +11,6 @@ class NavBar extends Component {
     if (user.id) {
       return (
         <Menu.Menu position='right'>
-          <Link to='/MainMenu'>
-            <Menu.Item name='MainMenu' />
-          </Link>
           <Menu.Item
             name='Logout'
             onClick={() => dispatch(handleLogout(history))}
@@ -40,7 +37,7 @@ class NavBar extends Component {
           <Link to='/about'>
             <Menu.Item name='Our History' />
           </Link>
-          <Link to='/menu'>
+          <Link to='/MainMenu'>
             <Menu.Item name='Menu' />
           </Link>
           { this.rightNavs() }
