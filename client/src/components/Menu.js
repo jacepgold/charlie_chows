@@ -10,7 +10,7 @@ import { Segment,
 import { Link } from 'react-router-dom';
 // import Search from './Search';
 
-class MainMenu extends React.Component {
+class Menu extends React.Component {
   state = {
     menus: { entries: [] },
     loading: true,
@@ -85,4 +85,4 @@ class MainMenu extends React.Component {
   }
 }
 
-export default MainMenu;
+export default Menu;
