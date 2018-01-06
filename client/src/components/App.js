@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NoMatch from './NoMatch';
 import NavBar from './NavBar';
+import Header from './SiteHeader';
 import Login from './Login';
 import Register from './Register';
 import Flash from './Flash';
@@ -11,6 +12,7 @@ import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import Menu from './Menu';
 import { Switch, Route } from 'react-router-dom';
+import SiteHeader from './SiteHeader';
 
 class App extends Component {
   render() {
@@ -41,4 +43,5 @@ const styles = {
     paddingTop: '2%',
   }
 }
+
 export default App;
