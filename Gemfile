@@ -27,6 +27,8 @@ gem "paranoia", "~> 2.4.0"
 group :development, :test do
   gem 'pry', '~> 0.11.3'
   gem 'faker', '~> 1.8.7'
+  gem 'rspec-rails', '~> 3.7.2'
+  gem 'annotate', '~> 2.7.2'
 end
 
 group :development do
@@ -37,7 +39,7 @@ group :development do
 end
 
 group :test do
-  # ZACH WE NEED YOU!!
-  # WE CAN'T LIVE WITHOUT YOU HERE!
-  # BERZ & TAJ LOVE YOU!
+  gem 'shoulda-matchers', '~> 3.1.2'
+  gem 'database_cleaner', '~> 1.6.2'
+  gem 'simplecov', '~> 0.15.1'
 end
