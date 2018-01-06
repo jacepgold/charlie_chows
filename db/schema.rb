@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180106175539) do
+ActiveRecord::Schema.define(version: 20180106180602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cart_items", force: :cascade do |t|
+    t.jsonb "substitutions"
+    t.bigint "menu_item_id"
+    t.bigint "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["menu_item_id"], name: "index_cart_items_on_menu_item_id"
+    t.index ["order_id"], name: "index_cart_items_on_order_id"
+  end
 
   create_table "menu_items", force: :cascade do |t|
     t.string "name", default: "", null: false
@@ -32,6 +42,18 @@ ActiveRecord::Schema.define(version: 20180106175539) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_menus_on_restaurant_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.boolean "delivery", default: false
+    t.string "customer_first_name", default: "", null: false
+    t.string "customer_last_name", default: "", null: false
+    t.string "customer_address", default: "", null: false
+    t.string "customer_phone", default: "", null: false
+    t.bigint "restaurant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -71,6 +93,9 @@ ActiveRecord::Schema.define(version: 20180106175539) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "cart_items", "menu_items"
+  add_foreign_key "cart_items", "orders"
   add_foreign_key "menu_items", "menus"
   add_foreign_key "menus", "restaurants"
+  add_foreign_key "orders", "restaurants"
 end
