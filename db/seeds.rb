@@ -7,13 +7,12 @@ Restaurant.create(
 menus = ['Appetizers', 'Entrees', 'Beverages', 'Desserts']
 
 menus.each do |menu, i|
-  menu = Menu.create(menu_type: menu, restaurant_id: 1)
+  menu = Menu.create(menu_type: menu)
   order = Order.create(
     customer_address: Faker::Address.street_address,
     customer_first_name: Faker::Name.first_name,
     customer_last_name: Faker::Name.last_name,
     customer_phone: Faker::PhoneNumber.phone_number,
-    restaurant_id: 1
   )
 
   5.times do
