@@ -41,6 +41,17 @@ RSpec.describe Api::RestaurantsController, type: :controller do
         expect(parsed['name']).to eq(valid_params[:name])
       end
     end
+
+    context 'with invalid params' do
+      it 'fails to update restaurant' do
+        put :update, params: { restaurant: { name: '' } }
+        parsed = JSON.parse(response.body)
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(parsed['errors']).to eq("Name can't be blank")
+        @restaurant.reload
+        expect(@restaurant.name).to_not eq('')
+      end
+    end
   end
 
 end
