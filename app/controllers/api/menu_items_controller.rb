@@ -3,7 +3,7 @@ class Api::MenuItemsController < ApplicationController
   before_action :set_menu_item, except: [:index, :create]
 
   def index
-    render json: @menu.menu_items
+    render json: MenuItem.all
   end
 
   def show
@@ -11,7 +11,7 @@ class Api::MenuItemsController < ApplicationController
   end
 
   def create
-    menu_item = @menu.menu_items.new(menu_item_params)
+    menu_item = MenuItem.new(menu_item_params)
     if menu_item.save
       render json: menu_item
     else
@@ -33,15 +33,11 @@ class Api::MenuItemsController < ApplicationController
 
   private
 
-  def set_menu
-    @menu = Menu.find(params[:menu_id])
-  end
-
   def set_menu_item
-    @menu_item = @menu.menu_items.find(params[:id])
+    @menu_item = MenuItem.find(params[:id])
   end
 
   def menu_item_params
-    params.require(:menu_item).permit(:name, :price, :description, :spicy)
+    params.require(:menu_item).permit(:name, :price, :description, :spicy, :item_type)
   end
 end
