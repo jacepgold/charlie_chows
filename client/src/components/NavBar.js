@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
-import { Menu, Input } from 'semantic-ui-react';
+import { Segment, Menu, Dropdown, Header } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
+import SiteHeader from './SiteHeader';
 
 class NavBar extends Component {
   state = { activeItem: 'home' }
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  callToAction = () => {
+    return(
+      <div>
+        <Header as='h1' id='logo' textAlign='center' style={ styles.white }>Above Nav</Header>
+      </div>
+    )
+  }
 
   rightNavs = () => {
     const { activeItem } = this.state;
@@ -31,36 +40,54 @@ class NavBar extends Component {
     );
   }
 
+
   render() {
     const { activeItem } = this.state
     return (
-      <nav>
-        <Menu pointing inverted style={ styles.main_menu }>
-          <Link to='/'>
-            <Menu.Item name='Home' active={activeItem === 'home'} />
-          </Link>
-          <Link to='/menu'>
-            <Menu.Item name='Menu' active={activeItem === 'menu'} />
-          </Link>
-          <Link to='/menu'>
-            <Menu.Item name='Catering' active={activeItem === 'catering'} />
-          </Link>
-          <Link to='/menu'>
-            <Menu.Item name='Contact' active={activeItem === 'contact'} />
-          </Link>
-          <Link to='/about'>
-            <Menu.Item name='Our History' active={activeItem === 'about'} />
-          </Link>
-          { this.rightNavs() }
-        </Menu>
-      </nav>
+      <div>
+        <Segment basic inverted>
+          { this.callToAction() }
+        </Segment>
+        <nav>
+          <Menu inverted style={ styles.main_menu }>
+            <Link to='/'>
+              <Menu.Item name='Home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+            </Link>
+            <Dropdown item text='Menu'>
+              <Dropdown.Menu>
+                <Dropdown.Item>Lunch & Dinner</Dropdown.Item>
+                <Dropdown.Item>Beverages</Dropdown.Item>
+                <Dropdown.Item>Desert</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Link to='/catering'>
+              <Menu.Item name='Catering' active={activeItem === 'catering'} onClick={this.handleItemClick} />
+            </Link>
+            <Link to='/contact'>
+              <Menu.Item name='Contact' active={activeItem === 'contact'} onClick={this.handleItemClick} />
+            </Link>
+            <Link to='/about'>
+              <Menu.Item name='Our History' active={activeItem === 'about'} onClick={this.handleItemClick} />
+            </Link>
+            { this.rightNavs() }
+          </Menu>
+        </nav>
+      </div>
     );
   }
 }
 
 const styles = {
+  callToAction: {
+    padding: '0',
+    Height: '100px',
+  },
   main_menu: {
     borderRadius: '0',
+    marginTop: '-11px',
+  },
+  white: {
+    color: 'white',
   },
 }
 
