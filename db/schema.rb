@@ -38,10 +38,8 @@ ActiveRecord::Schema.define(version: 20180106180602) do
 
   create_table "menus", force: :cascade do |t|
     t.string "menu_type", default: "", null: false
-    t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["restaurant_id"], name: "index_menus_on_restaurant_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -50,10 +48,8 @@ ActiveRecord::Schema.define(version: 20180106180602) do
     t.string "customer_last_name", default: "", null: false
     t.string "customer_address", default: "", null: false
     t.string "customer_phone", default: "", null: false
-    t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["restaurant_id"], name: "index_orders_on_restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -96,6 +92,4 @@ ActiveRecord::Schema.define(version: 20180106180602) do
   add_foreign_key "cart_items", "menu_items"
   add_foreign_key "cart_items", "orders"
   add_foreign_key "menu_items", "menus"
-  add_foreign_key "menus", "restaurants"
-  add_foreign_key "orders", "restaurants"
 end
