@@ -23,9 +23,6 @@ class NavBar extends Component {
     }
     return (
       <Menu.Menu position='right'>
-        <Link to='/register'>
-          <Menu.Item name='Register' />
-        </Link>
         <Link to='/login'>
           <Menu.Item name='Login' />
         </Link>
@@ -38,7 +35,13 @@ class NavBar extends Component {
       <div>
         <Menu pointing secondary>
           <Link to='/'>
-            <Menu.Item name='home' />
+            <Menu.Item name='Home' />
+          </Link>
+          <Link to='/about'>
+            <Menu.Item name='Our History' />
+          </Link>
+          <Link to='/menu'>
+            <Menu.Item name='Menu' />
           </Link>
           { this.rightNavs() }
         </Menu>

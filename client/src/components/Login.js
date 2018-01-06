@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Header, Segment, Form, Button } from 'semantic-ui-react';
+import { Container, Header, Segment, Form, Button } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
 import { handleLogin } from '../actions/auth';
 
 class Login extends Component {
@@ -21,35 +22,40 @@ class Login extends Component {
   render() {
     const { email, password } = this.state;
     return (
-      <Segment basic>
-        <Header as='h1' textAlign='center'>Login</Header>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Field>
-            <label htmlFor='email'>Email</label>
-            <input
-              required
-              id='email'
-              value={email}
-              placeholder='Email'
-              onChange={this.handleChange}
-            />
-          </Form.Field>
-          <Form.Field>
-            <label htmlFor='password'>Password</label>
-            <input
-              required
-              id='password'
-              value={password}
-              placeholder='Password'
-              type='password'
-              onChange={this.handleChange}
-            />
-          </Form.Field>
-          <Segment textAlign='center' basic>
-            <Button primary type='submit'>Submit</Button>
-          </Segment>
-        </Form>
-      </Segment>
+      <Container>
+        <Segment basic>
+          <Header as='h1' textAlign='center'>Login</Header>
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Field>
+              <label htmlFor='email'>Email</label>
+              <input
+                required
+                id='email'
+                value={email}
+                placeholder='Email'
+                onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label htmlFor='password'>Password</label>
+              <input
+                required
+                id='password'
+                value={password}
+                placeholder='Password'
+                type='password'
+                onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Segment textAlign='center' basic>
+              <h4>
+                Need an account? <Link to='/register'>Create one now!</Link>
+              </h4>
+              <Button primary type='submit'>Submit</Button>
+            </Segment>
+          </Form>
+        </Segment>
+      </Container>
     );
   }
 }
