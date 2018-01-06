@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import { Segment, Menu, Dropdown, Header } from 'semantic-ui-react';
+import { Segment, Menu, Dropdown, Header, Grid, Image } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
 import SiteHeader from './SiteHeader';
+import Logo from '../images/ChowsLogoWhite.png';
 
 class NavBar extends Component {
   state = { activeItem: 'home' }
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
+  // <Image style={styles.logo} src={Logo} alt='Charlie Chows Dragon Grill' />
+  
   callToAction = () => {
     return(
-      <div>
-        <Header as='h1' id='logo' textAlign='center' style={ styles.white }>Above Nav</Header>
-      </div>
+      <Grid stackable>
+        <Grid.Row>
+          <Grid.Column width={8}>
+            <div align='center'>
+                <Image style={styles.logo} src={Logo} alt='Charlie Chows Dragon Grill' />
+            </div>
+          </Grid.Column>
+          <Grid.Column width={8}>
+            <Image src='https://react.semantic-ui.com/assets/images/wireframe/paragraph.png' />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     )
   }
 
@@ -49,7 +60,7 @@ class NavBar extends Component {
           { this.callToAction() }
         </Segment>
         <nav>
-          <Menu inverted style={ styles.main_menu }>
+          <Menu inverted style={ styles.main_menu } stackable>
             <Link to='/'>
               <Menu.Item name='Home' active={activeItem === 'home'} onClick={this.handleItemClick} />
             </Link>
@@ -78,10 +89,6 @@ class NavBar extends Component {
 }
 
 const styles = {
-  callToAction: {
-    padding: '0',
-    Height: '100px',
-  },
   main_menu: {
     borderRadius: '0',
     marginTop: '-11px',
