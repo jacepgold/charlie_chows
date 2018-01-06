@@ -15,16 +15,10 @@ class NavBar extends Component {
     if (user.id) {
       return (
         <Menu.Menu position='right'>
-          <Link to='/MainMenu'>
-            <Menu.Item name='MainMenu' />
-          </Link>
           <Menu.Item
             name='Logout'
             onClick={() => dispatch(handleLogout(history))}
           />
-          <Menu.Item>
-            <Input className='icon' icon='search' placeholder='Search...' />
-          </Menu.Item>
         </Menu.Menu>
       );
     }
@@ -33,9 +27,6 @@ class NavBar extends Component {
         <Link to='/login'>
           <Menu.Item name='login' active={activeItem === 'login'} onClick={this.handleItemClick} />
         </Link>
-        <Menu.Item position='right'>
-          <Input className='icon' icon='search' placeholder='Search...' />
-        </Menu.Item>
       </Menu.Menu>
     );
   }
