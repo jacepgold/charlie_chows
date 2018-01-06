@@ -1,5 +1,4 @@
 class Api::MenuItemsController < ApplicationController
-  before_action :set_menu
   before_action :set_menu_item, except: [:index, :create]
 
   def index

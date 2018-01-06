@@ -9,7 +9,7 @@ export const fetchMenuItems = () => {
   return dispatch => {
     axios.get(`/api/menu_items`)
       .then( res => {
-        dispatch(setItems(res.data.entries))
+        dispatch(setItems(res.data))
         console.log(res.data)
       })
       .catch( err => {

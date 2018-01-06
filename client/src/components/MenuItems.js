@@ -11,9 +11,15 @@ import {
 } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { fetchMenuItems } from '../actions/items';
 
 class MenuItems extends React.Component {
   state = { category: '' }
+
+  componentDidMount() {
+    const { dispatch } = this.props
+    dispatch(fetchMenuItems())
+  }
 
 
   items = () => {
@@ -21,7 +27,7 @@ class MenuItems extends React.Component {
     const { category } = this.state;
     let visible = items;
     if (category)
-      visible = items.filter( a => a.category === category )
+      visible = items.filter( a => a.item_type === category )
     return visible.map( item =>
       <Card key={item.id}>
         <Image src={item.logo} />
@@ -84,7 +90,7 @@ class MenuItems extends React.Component {
 
   const mapStateToProps = (state) => {
     const { items } = state;
-    const categories = [...new Set(items.map( a => a.category ))]
+    const categories = [...new Set(items.map( a => a.item_type ))]
     return { items, categories }
   }
 
