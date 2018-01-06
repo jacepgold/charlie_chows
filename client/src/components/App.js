@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 // Components
 import NoMatch from './NoMatch';
@@ -11,7 +12,7 @@ import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
 import MenuItems from './MenuItems';
-import { Switch, Route } from 'react-router-dom';
+import Footer from './Footer';
 
 // Site pages
 import Login from './Login';
@@ -39,6 +40,7 @@ class App extends Component {
               <Route component={NoMatch} />
             </Switch>
           </FetchUser>
+          <Footer />
         </div>
       </div>
     );
