@@ -10,7 +10,7 @@ class NoMatch extends Component {
         <Header>
           <Header textAlign='center'>
             Error - 404<br />
-            "No you go wrong way... You go <Link to='/'>back</Link> now!<br />- Charlie Chow
+            "No you go wrong way... You go <Link to='/'>back</Link> now!"<br />- Charlie Chow
           </Header>
           <br />
           <br />
