@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Header, Container, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import Logo from '../images/ChowsLogo.png';
+import Logo from '../images/ChowsLogoWhite.png';
 
 class NoMatch extends Component {
   render() {
