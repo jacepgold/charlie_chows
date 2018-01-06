@@ -91,7 +91,8 @@ class NavBar extends Component {
 const styles = {
   main_menu: {
     borderRadius: '0',
-    marginTop: '-11px',
+    borderTop: '1px solid gray',
+    marginTop: '-14px',
   },
   white: {
     color: 'white',
