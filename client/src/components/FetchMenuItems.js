@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 import MenuItems from './MenuItems';
 import { getMenuItems } from '../actions/MenuItems';
-import { Loader, Segment, Dimmer } from 'semantic-ui-react';
+import { Loader, Segment, Dimmer, Header } from 'semantic-ui-react';
 
 class FetchMenuItems extends React.Component {
   state = { loaded: false }
