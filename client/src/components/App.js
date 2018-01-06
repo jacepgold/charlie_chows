@@ -10,7 +10,7 @@ import About from './About';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
 import FetchUser from './FetchUser';
-import Menu from './Menu';
+import MenuItems from './MenuItems';
 import { Switch, Route } from 'react-router-dom';
 import SiteHeader from './SiteHeader';
 
@@ -24,7 +24,7 @@ class App extends Component {
           <FetchUser>
             <Switch id='page' style={ styles.page }>
               <Route exact path='/' component={Home} />
-              <Route exact path='/Menu' component={Menu} />
+              <Route exact path='/Menu' component={MenuItems} />
               <Route exact path='/about' component={About} />
               <AuthRoute exact path='/login' component={Login} />
               <AuthRoute exact path='/register' component={Register} />
