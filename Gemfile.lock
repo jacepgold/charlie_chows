@@ -74,6 +74,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    materialize-sass (0.100.2)
+      sass (~> 3.3)
     method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
@@ -127,6 +129,11 @@ GEM
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
     ruby_dep (1.5.0)
+    sass (3.5.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -158,6 +165,7 @@ DEPENDENCIES
   faker (~> 1.8.7)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  materialize-sass
   omniauth
   paranoia (~> 2.4.0)
   pg (~> 0.18)
