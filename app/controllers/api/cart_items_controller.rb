@@ -1,14 +1,12 @@
 class Api::CartItemsController < ApplicationController
   before_action :set_order
   before_action :set_cart_item, except: [:index, :create]
-  before_action :set_menu_item, only: [:show]
 
   def index
-    render json: @order.menu_items
+    @cart_items = @order.cart_items
   end
 
   def show
-    render json: @menu_item
   end
 
   def create
@@ -40,10 +38,6 @@ class Api::CartItemsController < ApplicationController
 
   def set_cart_item
     @cart_item = @order.cart_items.find(params[:id])
-  end
-
-  def set_menu_item
-    @menu_item = @order.menu_items.find(@cart_item.menu_item_id)
   end
 
   def cart_item_params
