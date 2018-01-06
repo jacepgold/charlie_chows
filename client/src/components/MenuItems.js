@@ -10,9 +10,11 @@ import {
   Button,
 } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class MenuItems extends React.Component {
   state = { category: '' }
+
 
   items = () => {
     const { items } = this.props;
@@ -21,20 +23,20 @@ class MenuItems extends React.Component {
     if (category)
       visible = items.filter( a => a.category === category )
     return visible.map( item =>
-      <Card key={menu_item.id}>
-        <Image src={menu_item.logo} />
+      <Card key={item.id}>
+        <Image src={item.logo} />
         <Card.Content>
           <Card.Header>
-            {menu_item.name}
+            {item.name}
           </Card.Header>
           <Card.Meta>
-            <span>{menu_item.price}</span>
+            <span>{item.price}</span>
           </Card.Meta>
           <Card.Description>
-            {menu_item.description}
+            {item.description}
           </Card.Description>
           <Card.Content extra>
-            <Link to={`/menu/menu_items/${menu_item.id}`}>
+            <Link to={`/menu/menu_items/${item.id}`}>
               View Item
             </Link>
           </Card.Content>

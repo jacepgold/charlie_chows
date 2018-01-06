@@ -9,7 +9,6 @@ import { Segment,
   Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import MenuItems from './MenuItems';
-// import Search from './Search';
 
 class Menu extends React.Component {
   state = {
@@ -25,12 +24,6 @@ class Menu extends React.Component {
   getMenus = () => {
     axios.get(`/api/api_menus`)
       .then( res => this.setState({ menus: res.data, loading: false, visible: res.data }) )
-  }
-
-  handlePageClick = () => {
-    this.setState({ loading: true }, () => {
-      this.getMenus()
-    });
   }
 
   render() {
