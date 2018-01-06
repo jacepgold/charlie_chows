@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     get '/restaurant', to: 'restaurants#show'
     put '/restaurant', to: 'restaurant#update'
-    resources :menus do
-      resources :menu_items
-    end
+    resources :menu_items
     resources :orders do
       resources :cart_items
     end
