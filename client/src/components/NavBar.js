@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Segment, Menu, Dropdown, Header, Grid, Image } from 'semantic-ui-react';
+import { Container, Segment, Menu, Dropdown, Header, Grid, Image } from 'semantic-ui-react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
 import SiteHeader from './SiteHeader';
-import Logo from '../images/ChowsLogoWhite.png';
+import Logo from '../images/ChowsLogo.png';
 
 class NavBar extends Component {
   state = { activeItem: 'home' }
@@ -13,18 +13,31 @@ class NavBar extends Component {
   
   callToAction = () => {
     return(
-      <Grid stackable>
-        <Grid.Row>
-          <Grid.Column width={8}>
-            <div align='center'>
-                <Image style={styles.logo} src={Logo} alt='Charlie Chows Dragon Grill' />
-            </div>
-          </Grid.Column>
-          <Grid.Column width={8}>
-            <Image src='https://react.semantic-ui.com/assets/images/wireframe/paragraph.png' />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <div style={styles.header}>
+        <Container>
+          <Grid stackable>
+            <Grid.Row>
+              <Grid.Column width={8}>
+                <div align='center'>
+                  <Image style={styles.logo} src={Logo} alt='Charlie Chows Dragon Grill' />
+                </div>
+              </Grid.Column>
+              <Grid.Column width={8}>
+                <Header as='h3' style={styles.black} textAlign='center'>
+                  For dining reservations,<br />carry-out, delivery, or catering.
+                </Header>
+                <Header as='h1' textAlign='center' style={styles.red}>
+                  Call Us Now!
+                </Header>
+                <Header as='h3' textAlign='center' class="middle aligned" style={styles.black}>
+                  Call (801) 328-3663<br />
+                  255 East 400 South, Salt Lake City, Utah 84111
+                </Header>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </div>
     )
   }
 
@@ -56,7 +69,7 @@ class NavBar extends Component {
     const { activeItem } = this.state
     return (
       <div>
-        <Segment basic inverted>
+        <Segment basic>
           { this.callToAction() }
         </Segment>
         <nav>
@@ -64,13 +77,9 @@ class NavBar extends Component {
             <Link to='/'>
               <Menu.Item name='Home' active={activeItem === 'home'} onClick={this.handleItemClick} />
             </Link>
-            <Dropdown item text='Menu'>
-              <Dropdown.Menu>
-                <Dropdown.Item>Lunch & Dinner</Dropdown.Item>
-                <Dropdown.Item>Beverages</Dropdown.Item>
-                <Dropdown.Item>Desert</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+            <Link to='/menu'>
+              <Menu.Item name='Menu' active={activeItem === 'menu'} onClick={this.handleItemClick} />
+            </Link>
             <Link to='/catering'>
               <Menu.Item name='Catering' active={activeItem === 'catering'} onClick={this.handleItemClick} />
             </Link>
@@ -96,6 +105,12 @@ const styles = {
   },
   white: {
     color: 'white',
+  },
+  black: {
+    color: 'black'
+  },
+  red: {
+    color: 'red',
   },
 }
 
