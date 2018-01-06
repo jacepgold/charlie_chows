@@ -1,5 +1,5 @@
 class Api::RestaurantsController < ApplicationController
-  before_each :set_restaurant
+  before_action :set_restaurant
 
   def show
     render json: @restaurant
