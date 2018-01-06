@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180106180602) do
   enable_extension "plpgsql"
 
   create_table "cart_items", force: :cascade do |t|
-    t.jsonb "substitutions"
+    t.jsonb "special_instructions"
     t.bigint "menu_item_id"
     t.bigint "order_id"
     t.datetime "created_at", null: false
