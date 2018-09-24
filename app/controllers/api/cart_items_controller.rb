@@ -32,15 +32,15 @@ class Api::CartItemsController < ApplicationController
 
   private
 
-  def set_order
-    @order = Order.find(params[:order_id])
-  end
+    def set_order
+      @order = Order.find(params[:order_id])
+    end
 
-  def set_cart_item
-    @cart_item = @order.cart_items.find(params[:id])
-  end
+    def set_cart_item
+      @cart_item = @order.cart_items.find(params[:id])
+    end
 
-  def cart_item_params
-    params.require(:cart_item).permit(:menu_item_id, :special_instructions)
-  end
+    def cart_item_params
+      params.require(:cart_item).permit(:menu_item_id, :special_instructions)
+    end
 end

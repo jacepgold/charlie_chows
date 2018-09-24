@@ -8,7 +8,12 @@ import Food3 from '../images/chinafood3.jpg';
 import Food4 from '../images/chinafood4.jpg';
 
 class Home extends React.Component {
-      render() {
+
+  componentDidMount() {
+    document.title = 'Charlie Chows';
+  }
+  
+  render() {
       var settings = {
       dots: true,
       infinite: true,
@@ -19,13 +24,13 @@ class Home extends React.Component {
     };
     return (
       <Container>
-      <Slider {...settings}>
-        <div><img style={styles.food} src={Food1} alt='Charlie Chows Dragon Grill' /></div>
-        <div><img style={styles.food} src={Food2} alt='Charlie Chows Dragon Grill' /></div>
-        <div><img style={styles.food} src={Food3} alt='Charlie Chows Dragon Grill' /></div>
-        <div><img style={styles.food} src={Food4} alt='Charlie Chows Dragon Grill' /></div>
-      </Slider>
-      <br /><br />
+        <Slider {...settings}>
+          <div><img style={styles.food} src={Food1} alt='Charlie Chows Dragon Grill' /></div>
+          <div><img style={styles.food} src={Food2} alt='Charlie Chows Dragon Grill' /></div>
+          <div><img style={styles.food} src={Food3} alt='Charlie Chows Dragon Grill' /></div>
+          <div><img style={styles.food} src={Food4} alt='Charlie Chows Dragon Grill' /></div>
+        </Slider>
+        <br /><br />
         <Container>
           <p style={ styles.paragraph }>
             Charlie Chow's Dragon Grill has always been known for it's fine 

@@ -21,7 +21,6 @@ class MenuItems extends React.Component {
     dispatch(fetchMenuItems())
   }
 
-
   items = () => {
     const { items } = this.props;
     const { category } = this.state;
